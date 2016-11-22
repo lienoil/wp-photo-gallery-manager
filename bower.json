@@ -1,0 +1,22 @@
+{
+  "name": "wp-photo-gallery-manager",
+  "authors": [
+    "John Lioneil Dionisio <john.dionisio1@gmail.com>"
+  ],
+  "description": "A photo gallery with lightbox support.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "lightgallery": "lightGallery#^1.3.6",
+    "owl-carousel": "^1.3.2"
+  }
+}

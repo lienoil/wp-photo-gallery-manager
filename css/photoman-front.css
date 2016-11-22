@@ -1,0 +1,18 @@
+.photogal .item {
+	display: inline-block;
+	margin: 10px;
+}
+
+.image-selector {
+	cursor: pointer;
+}
+
+.lg-outer .lg-thumb-item img {
+	height: auto;
+}
+
+.photogal .image-container .img-item {
+	height: auto;
+	max-height: 500px;
+	width: 100%;
+}

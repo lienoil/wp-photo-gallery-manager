@@ -1,0 +1,42 @@
+<?php
+
+# Style
+add_action( 'admin_enqueue_scripts', 'pms_styles_collection' );
+function pms_styles_collection() {
+    global $post_type;
+    if( PhotoController::$cpt_name_singular === $post_type)
+    {
+        wp_register_style( 'pms-admin', PMS_PLUGIN_CSS . 'pms-admin.css', false, '1.0.0' );
+        wp_enqueue_style( 'pms-admin' );
+        wp_enqueue_style( 'pms-jquery-ui', PMS_PLUGIN_VENDOR . 'jquery/jquery-ui.min.css', false, '1.14' );
+    }
+}
+
+# Script
+add_action( 'admin_enqueue_scripts', 'pms_scripts_collection' );
+function pms_scripts_collection() {
+    global $post_type;
+    if( PhotoController::$cpt_name_singular === $post_type)
+    {
+        wp_enqueue_media();
+        wp_enqueue_script( 'pms-admin', PMS_PLUGIN_JS . 'pms-admin.js', array('jquery'), '3.0.0', true );
+        wp_enqueue_script( 'pms-jquery-ui', PMS_PLUGIN_VENDOR . 'jquery/jquery-ui.min.js', array('jquery'), '1.14', true );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'photogal_styles_collection' );
+function photogal_styles_collection() {
+    wp_enqueue_style('jquery-lightGallery', PMS_PLUGIN_VENDOR . 'lightGallery/css/lightgallery.min.css', false, '1.2.9');
+    wp_enqueue_style('owl.carousel', PMS_PLUGIN_VENDOR . 'owl.carousel/owl-carousel/owl.carousel.css', false, '1.3.3');
+    wp_enqueue_style('owl.carousel.theme', PMS_PLUGIN_VENDOR . 'owl.carousel/owl-carousel/owl.theme.css', false, '1.3.3');
+    wp_enqueue_style('photoman-front', PMS_PLUGIN_CSS.'photoman-front.css', array('jquery-lightGallery'), '2.2.1');
+}
+
+add_action('wp_footer', 'photogal_scripts_collection');
+function photogal_scripts_collection(){
+    wp_enqueue_script( 'jquery-lightGallery', PMS_PLUGIN_VENDOR . 'lightGallery/js/lightgallery-all.min.js', array('jquery'), '1.2.9', true );
+    wp_enqueue_script( 'owl.carousel', PMS_PLUGIN_VENDOR . 'owl.carousel/owl-carousel/owl.carousel.min.js', array('jquery'), '1.3.3', true);
+    wp_enqueue_script( 'photogal', PMS_PLUGIN_JS . 'photogal.js', array('jquery'), '1.0.0', true );
+}
+
+ ?>
