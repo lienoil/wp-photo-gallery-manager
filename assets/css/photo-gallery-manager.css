@@ -1,9 +1,9 @@
 .gallery-card {
 	float: left;
 	margin: 0 8px 16px;
-	width: 48.5%;
-	width: -webkit-calc(50% - 8px);
-	width: calc(50% - 8px);
+	width: 31.333%;
+	width: -webkit-calc(33.333% - 8px);
+	width: calc(33.333% - 8px);
 	background-color: #fff;
 	border: 1px solid #ddd;
 	-webkit-box-sizing: border-box;

@@ -1,0 +1,50 @@
+.gallery {
+	&-card {
+		float: left;
+		margin: 8px;
+		width: 31.333%;
+		width: calc(33.333% - 16px);
+		background-color: #fff;
+		border: 1px solid #ddd;
+		box-sizing: border-box;
+		&s {
+			position: relative;
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+				position: relative;
+			}
+		}
+
+		&-top {
+			position: relative;
+			padding: 20px 20px 10px;
+			min-height: 135px;
+			overflow: hidden;
+		}
+
+		&-bottom {
+			clear: both;
+			padding: 12px 20px;
+			background-color: #fafafa;
+			border-top: 1px solid #ddd;
+			overflow: hidden;
+		}
+
+		.image-previewer {
+			border: none;
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+		}
+	}
+
+	p {
+		margin: 1em 0 0 0;
+		margin-bottom: 0;
+	}
+}

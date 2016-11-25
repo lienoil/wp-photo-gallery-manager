@@ -1,0 +1,10 @@
+.button {
+	&-destroy {
+		line-height: inherit;
+		position: relative;
+		z-index: 999;
+	}
+	&-container {
+		padding: 8px;
+	}
+}

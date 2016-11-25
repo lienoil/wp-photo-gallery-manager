@@ -1,0 +1,24 @@
+$table-padding: 10px;
+$table-padding-top: 20px;
+$table-padding-right: 10px;
+$table-padding-bottom: 20px;
+$table-padding-left: 0;
+
+.table {
+	vertical-align: top;
+    text-align: left;
+    padding: $table-padding-top $table-padding-right $table-padding-bottom 0;
+    border-collapse: collapse;
+	th, label {
+	    color: #23282d;
+	    font-weight: 400;
+	    text-shadow: none;
+	    vertical-align: baseline;
+	}
+
+	td, th {
+		margin-bottom: 9px;
+		padding: 15px 10px;
+		vertical-align: top;
+	}
+}

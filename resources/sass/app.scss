@@ -1,0 +1,11 @@
+
+@import "variables";
+
+@import "resets";
+
+// Prefixed with .photogal
+.photogal {
+	@import "partials/button";
+	@import "partials/gallery";
+	@import "partials/table";
+}

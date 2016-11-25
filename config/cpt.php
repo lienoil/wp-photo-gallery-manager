@@ -8,6 +8,6 @@ return array(
 		'icon' => 'dashicons-format-gallery',
 		'rewrite' => true,
 		'menu_position' => 8,
-		'supports' => array('title', 'thumbnail', 'editor'),
+		'supports' => array('title', 'editor'),
 	)
 );

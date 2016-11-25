@@ -3,6 +3,10 @@
 	margin: 10px;
 }
 
+.photogal .text-center {
+	text-align: center;
+}
+
 .image-selector {
 	cursor: pointer;
 }
@@ -15,4 +19,8 @@
 	height: auto;
 	max-height: 500px;
 	width: 100%;
+}
+
+.hidden.light-box-caption {
+	display: none;
 }
