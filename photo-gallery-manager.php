@@ -241,7 +241,6 @@ function photoman_enqueue_admin_styles() {
 add_action('admin_enqueue_scripts', 'photoman_enqueue_admin_scripts');
 function photoman_enqueue_admin_scripts() {
     wp_enqueue_script('cloner', plugins_url('/vendor/jquery-cloner/dist/jquery.cloner.js', __FILE__), array('jquery'), '1.2.3', true);
-
     wp_enqueue_script('admin', plugins_url('/js/admin.js', __FILE__), array('jquery'), PHOTOMAN_VERSION, true);
 }
 
@@ -250,7 +249,7 @@ function photoman_enqueue_admin_scripts() {
  *
  */
 add_action('wp_enqueue_scripts', 'photoman_enqueue_styles');
-add_action('wp_print_scripts', 'photoman_enqueue_footer_scripts');
+add_action('wp_enqueue_scripts', 'photoman_enqueue_footer_scripts');
 function photoman_enqueue_styles() {
     wp_register_style('lightgallery', plugins_url('/vendor/lightgallery/dist/css/lightgallery.min.css', __FILE__), array(), PHOTOMAN_VERSION, 'all');
     wp_enqueue_style('lightgallery');
